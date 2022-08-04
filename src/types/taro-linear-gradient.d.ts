@@ -1,2 +1,2 @@
-declare module 'taro-linear-gradient' {
+declare module 'linear-gradient-taro' {
 }
