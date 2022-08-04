@@ -40,6 +40,7 @@
 
     "lib": ["es2017"],
     "types": ["node"],
+    "skipLibCheck": true,
     "typeRoots": ["node_modules/@types", "src/types"]
   },
   "include": ["src/**/*.ts", "src/lib/index.tsx"],
