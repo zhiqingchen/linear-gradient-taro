@@ -7,5 +7,9 @@ if (process.env.TARO_ENV === 'rn') {
 } else {
   implementation = require('./lib/index')
 }
-const linearGradient: ComponentType<LinearGradientProps> = implementation.default || implementation
+
+interface ExtendLinearGradientProps extends LinearGradientProps {
+  className?: string
+}
+const linearGradient: ComponentType<ExtendLinearGradientProps> = implementation.default || implementation
 export default linearGradient

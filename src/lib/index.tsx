@@ -47,12 +47,12 @@ export default class LinearGradient extends PureComponent<extendLinearGradientPr
   getAngle = () => {
     const { start, end } = this.props
 
-    const direction = getDirction(start, end)
-    if(direction) return direction
-
     if (this.props.useAngle) {
       return this.props.angle + 'deg';
     }
+
+    const direction = getDirction(start, end)
+    if(direction) return direction
 
     // Math.atan2 handles Infinity
     const angle =
@@ -85,18 +85,17 @@ export default class LinearGradient extends PureComponent<extendLinearGradientPr
       useAngle,
       angleCenter,
       angle,
-      style,
+      style={},
       children,
       ...otherProps
     } = this.props;
     return (
       <View
         {...otherProps}
-        // @ts-ignore
-        style={[
-          style,
-          { backgroundImage: `linear-gradient(${this.getAngle()},${this.getColors()})` },
-        ]}
+        style={{
+          ...style,
+          backgroundImage: `linear-gradient(${this.getAngle()},${this.getColors()})`,
+        }}
       >
         {children}
       </View>
