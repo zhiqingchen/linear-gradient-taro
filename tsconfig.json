@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "jsx": "react",
     "incremental": true,
     "target": "es2017",
     "outDir": "build/main",
@@ -41,7 +42,7 @@
     "types": ["node"],
     "typeRoots": ["node_modules/@types", "src/types"]
   },
-  "include": ["src/**/*.ts"],
+  "include": ["src/**/*.ts", "src/lib/index.tsx"],
   "exclude": ["node_modules/**"],
   "compileOnSave": false
 }
