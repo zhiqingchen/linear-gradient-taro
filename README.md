@@ -16,13 +16,7 @@ linear gradient fro taro, reference react-native-linear-gradient & react-native-
 Using Yarn
 
 ```sh
-yarn add linear-gradient-taro
-```
-
-Using npm
-
-```sh
-npm install linear-gradient-taro --save
+yarn add linear-gradient-taro react-native-linear-gradient
 ```
 
 ### With React Native >= 0.60
